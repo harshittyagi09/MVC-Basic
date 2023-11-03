@@ -6,17 +6,18 @@
             <h2 class="text-info">Add New Category</h2>
             <hr />
         </div>
+        <input type="hidden" asp-for="Id"/>
         <div class="row mb-3">
             <label asp-for="Name"></label>
-            <input asp-for="Name" class="form-control"/>
+            <input disabled asp-for="Name" class="form-control"/>
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="row mb-3">
             <label asp-for="DisplayOrder"></label>
-            <input asp-for="DisplayOrder" class="form-control" />
+            <input disabled asp-for="DisplayOrder" class="form-control" />
             <span asp-validation-for="DisplayOrder" class="text-danger"></span>
         </div>
-        <button class="btn btn-info" type="submit">Create</button>
+        <button class="btn btn-outline-danger" type="submit">Delete</button>
     </div>
     <br />
     <a asp-action="Index" asp-controller="category">Back to List </a>
